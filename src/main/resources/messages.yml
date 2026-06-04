@@ -1,0 +1,46 @@
+# BakaAchievements 语言文件
+# 所有值均支持 MiniMessage 格式和 PlaceholderAPI 占位符
+# 可用变量: {player}, {node}, {status}, {keyword}, {usage},
+#           {done}, {total}, {time}, {current}/{total} (分页)
+
+# ── 前缀 ─────────────────────────────────────────────────────────────────
+PREFIX: "<gradient:#6cd3ff:#dc67ff>BakaAchievements</gradient> <dark_gray>»</dark_gray>"
+
+# ── 通用消息 ─────────────────────────────────────────────────────────────
+NO_PERMISSION: "<red>你没有权限执行此操作！</red>"
+PLAYER_NOT_FOUND: "<red>玩家未找到或不在线。</red>"
+CONFIG_RELOADED: "<green>配置已重载。</green>"
+MESSAGES_RELOADED: "<green>语言文件已重载。</green>"
+
+# ── 命令消息 ─────────────────────────────────────────────────────────────
+SET_SUCCESS: "<green>已将玩家 {player} 的成就 {node} 设置为 {status}。</green>"
+ENABLE_SUCCESS: "<green>成就 {node} 已启用。</green>"
+DISABLE_SUCCESS: "<green>成就 {node} 已禁用。</green>"
+NODE_NOT_FOUND: "<red>成就节点不存在: {node}</red>"
+INVALID_USAGE: "<red>用法: {usage}</red>"
+
+# ── GUI 消息 ────────────────────────────────────────────────────────────
+GUI_TITLE_ACHIEVEMENTS: "成就列表"
+GUI_TITLE_SEARCH: "搜索: {keyword}"
+GUI_TITLE_DETAIL: "成就详情"
+GUI_PREV_PAGE: "<yellow>◀ 上一页</yellow>"
+GUI_NEXT_PAGE: "<yellow>下一页 ▶</yellow>"
+GUI_CLOSE: "<red>✕ 关闭</red>"
+GUI_BACK: "<gray>↩ 返回上级</gray>"
+GUI_PAGE_INFO: "<gray>第 {current}/{total} 页</gray>"
+GUI_PROGRESS: "<gray>进度: {done}/{total}</gray>"
+GUI_UNLOCKED_TIME: "<gray>达成于: {time}</gray>"
+GUI_PERMISSION_REQUIRED: "<red>需要权限节点: {node}</red>"
+GUI_NO_ACCESS: "<red>你没有权限访问此成就。</red>"
+GUI_NO_CONDITIONS: "<gray>此成就无条件限制，需手动完成。</gray>"
+GUI_CATEGORY_PROGRESS: "<gray>完成进度: {done}/{total} ({percent}%)</gray>"
+GUI_CONDITION_STATUS: "  <gray>{index}. {op} {target} → {result}</gray>"
+GUI_ACHIEVEMENT_LOCKED: "<red>✗ 未达成</red>"
+GUI_ACHIEVEMENT_UNLOCKED: "<green>✓ 已达成</green>"
+
+# ── 聊天广播 ────────────────────────────────────────────────────────────
+CHAT_ACHIEVEMENT_UNLOCKED: "<gold>{player}</gold> <gray>解锁了成就</gray> <green>{display}</green>"
+
+# ── 搜索 ─────────────────────────────────────────────────────────────────
+SEARCH_HEADER: "<yellow>搜索结果: {keyword}</yellow>"
+SEARCH_NO_RESULTS: "<gray>未找到匹配的成就。</gray>"

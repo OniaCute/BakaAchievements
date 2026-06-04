@@ -1,0 +1,27 @@
+name: BakaAchievements
+version: '${version}'
+main: cc.oniacute.plugin.bakaachievements.BakaAchievements
+api-version: '1.21'
+prefix: BakaAchievements
+authors: [ OniaCute ]
+description: A custom achievements plugin with chest GUI, vanilla sync, and PlaceholderAPI support.
+website: www.oniacute.cc
+
+depend: []
+softdepend: [ PlaceholderAPI ]
+
+commands:
+  bakaachievements:
+    description: BakaAchievements main command
+    usage: /bakaachievements [search|check|set|enable|disable|reload]
+    aliases: [ bac, bakaachieve, bachieve ]
+
+permissions:
+  bakaachievements.admin:
+    description: Allows administrative actions for BakaAchievements
+    default: op
+    children:
+      bakaachievements.player: true
+  bakaachievements.player:
+    description: Allows opening achievement GUI and checking status
+    default: true

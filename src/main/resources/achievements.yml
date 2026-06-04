@@ -1,0 +1,59 @@
+# BakaAchievements 自定义成就配置
+# 格式参见 .agents/INTRODUCE.md
+
+customAchievements:
+  testCategory:
+    type: "CATEGORY"
+    name: "test"
+    display: "<rainbow>测试分类</rainbow>"
+    permission: false
+    son:
+      testSubCategory:
+        type: "CATEGORY"
+        name: "test_sub"
+        display: "<rainbow>测试子分类</rainbow> <b>子</b>"
+        permission: true
+        son:
+          test_ach_1:
+            type: "ACHIEVEMENT"
+            name: "test_ach_1"
+            display: "<green>测试成就一</green>"
+            material: "DIAMOND"
+            permission: true
+            auto: true
+            conditions:
+              a:
+                type: ">="
+                target: "%player_health%"
+                current: "20"
+      test_ach_2:
+        type: "ACHIEVEMENT"
+        name: "test_ach_2"
+        display: "<gold>测试成就二</gold>"
+        material: "GOLD_INGOT"
+        permission: false
+        auto: true
+        conditions:
+          a:
+            type: "="
+            target: "%player_level%"
+            current: "10"
+          b:
+            type: "hasPermission"
+            target: "bakaachievements.admin"
+            current: "ignored"
+      test_ach_3:
+        type: "ACHIEVEMENT"
+        name: "test_ach_3"
+        display: "<blue>测试成就三</blue>"
+        material: "IRON_INGOT"
+        permission: false
+        auto: false
+        conditions: []
+
+  testCategory2:
+    type: "CATEGORY"
+    name: "test2"
+    display: "<rainbow>测试分类二</rainbow> <b>2</b>"
+    permission: true
+    son: []

@@ -1,0 +1,39 @@
+# BakaAchievements 配置文件
+# Paper 1.21.11 自定义成就插件
+
+# ── 调试模式 ─────────────────────────────────────────────────────────────
+debug: false
+
+# ── 异步设置 ─────────────────────────────────────────────────────────────
+async:
+  # 定时扫描间隔（tick，20 tick = 1 秒）
+  scan-interval-ticks: 600
+  # 异步线程池大小
+  thread-pool-size: 2
+
+# ── 聊天设置 ─────────────────────────────────────────────────────────────
+chat:
+  # 替换原版成就广播
+  override-vanilla: true
+  # 自定义广播格式（支持 PAPI 占位符和 MiniMessage）
+  # 可用变量: %player_name%, %display%, %description%
+  format: "<gold>%player_name%</gold> <gray>解锁了成就</gray> <green>%display%</green>"
+
+# ── 数据存储 ─────────────────────────────────────────────────────────────
+storage:
+  # 脏数据刷盘间隔（tick）
+  flush-interval-ticks: 600
+  # 离线玩家数据缓存淘汰时间（分钟）
+  cache-evict-after-offline-minutes: 5
+
+# ── GUI 设置 ─────────────────────────────────────────────────────────────
+gui:
+  # 箱子行数（1-6）
+  rows: 6
+  # 空白槽位填充玻璃板
+  fill-empty: true
+
+# ── 权限设置 ─────────────────────────────────────────────────────────────
+permission:
+  # bakaachievements.player 权限是否默认授予所有玩家
+  player-default: true
