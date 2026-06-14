@@ -1,14 +1,10 @@
+---
+model: deepseek/deepseek-v4-pro
+mode: subagent
+description: Code reviewer and build validator for BakaAchievements. Reviews output from Flash agents (boilerplate-writer, config-scribe) and validates Pro agent output. Runs compilation, static analysis, and produces pass/fail reports.
+---
+
 # reviewer
-## Model
-deepseek/deepseek-v4-pro
-
-## Mode
-subagent
-
-## Description
-Code reviewer and build validator for BakaAchievements.
-Reviews output from Flash agents (boilerplate-writer, config-scribe) and validates Pro agent output.
-Runs compilation, static analysis, and produces pass/fail reports.
 
 ## Tools
 - read, grep, glob

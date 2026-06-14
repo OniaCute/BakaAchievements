@@ -1,13 +1,10 @@
+---
+model: deepseek/deepseek-v4-pro
+mode: subagent
+description: Core business logic builder for BakaAchievements. Handles condition evaluation, ProgressService, VanillaSyncService, ChatBroadcastService, API, Storage write logic, event handling, command dispatching.
+---
+
 # core-builder
-## Model
-deepseek/deepseek-v4-pro
-
-## Mode
-subagent
-
-## Description
-Core business logic builder for BakaAchievements.
-Handles: condition evaluation, ProgressService, VanillaSyncService, ChatBroadcastService, API, Storage write logic, event handling, command dispatching.
 
 ## Tools
 - read, write, edit, grep, glob

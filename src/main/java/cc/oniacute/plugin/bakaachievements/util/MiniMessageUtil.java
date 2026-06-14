@@ -103,6 +103,28 @@ public final class MiniMessageUtil {
     }
 
     /**
+     * 安全地将文本渲染为灰色非斜体。
+     * <p>
+     * 先尝试 MiniMessage 包裹 {@code <!italic><gray>text</gray>}，
+     * 若文本内含未闭合的 MiniMessage 标签导致解析失败，降级为
+     * 纯文本灰色 Component（斜体关闭）。
+     * </p>
+     *
+     * @param text        原始文本（可能含 MiniMessage 标签）
+     * @param miniMessage MiniMessage 解析器
+     * @return 灰色非斜体 Component
+     */
+    public static Component parseGray(@NotNull String text, @NotNull MiniMessage miniMessage) {
+        try {
+            return miniMessage.deserialize("<!italic><gray>" + text + "</gray>");
+        } catch (Exception e) {
+            return Component.text(text)
+                    .color(net.kyori.adventure.text.format.NamedTextColor.GRAY)
+                    .decoration(net.kyori.adventure.text.format.TextDecoration.ITALIC, false);
+        }
+    }
+
+    /**
      * 将 Component 序列化为 Legacy 颜色码字符串。
      *
      * @param component Component 实例

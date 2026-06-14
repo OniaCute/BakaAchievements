@@ -1,13 +1,10 @@
+---
+model: deepseek/deepseek-v4-pro
+mode: subagent
+description: Chest GUI builder for BakaAchievements using native Bukkit InventoryHolder API. Handles ItemFactory, CategoryMenu, AchievementDetailMenu, SearchResultMenu, MenuController, pagination, breadcrumbs.
+---
+
 # gui-builder
-## Model
-deepseek/deepseek-v4-pro
-
-## Mode
-subagent
-
-## Description
-Chest GUI builder for BakaAchievements using native Bukkit InventoryHolder API.
-Handles: ItemFactory, CategoryMenu, AchievementDetailMenu, SearchResultMenu, MenuController, pagination, breadcrumbs.
 
 ## Tools
 - read, write, edit, grep, glob

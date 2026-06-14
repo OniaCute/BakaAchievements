@@ -91,7 +91,11 @@ public final class BakaAchievementsApi implements BakaApi {
     @Override
     public Collection<String> listAchievementPaths() {
         return registry.getAllNodes().entrySet().stream()
-                .filter(e -> e.getValue().nodeType() == AchievementNode.NodeType.ACHIEVEMENT)
+                .filter(e -> {
+                    var nt = e.getValue().nodeType();
+                    return nt == AchievementNode.NodeType.ACHIEVEMENT
+                            || nt == AchievementNode.NodeType.MIXED;
+                })
                 .map(Map.Entry::getKey)
                 .toList();
     }
@@ -99,7 +103,11 @@ public final class BakaAchievementsApi implements BakaApi {
     @Override
     public Collection<String> listCategoryPaths() {
         return registry.getAllNodes().entrySet().stream()
-                .filter(e -> e.getValue().nodeType() == AchievementNode.NodeType.CATEGORY)
+                .filter(e -> {
+                    var nt = e.getValue().nodeType();
+                    return nt == AchievementNode.NodeType.CATEGORY
+                            || nt == AchievementNode.NodeType.MIXED;
+                })
                 .map(Map.Entry::getKey)
                 .toList();
     }
@@ -120,12 +128,38 @@ public final class BakaAchievementsApi implements BakaApi {
         return setStatusInternal(player, nodePath, unlocked, data);
     }
 
+    @Override
+    public CompletableFuture<Void> unlock(UUID player, String nodePath) {
+        PlayerAchievementData data = storage.getCached(player);
+        if (data == null) {
+            return storage.load(player).thenCompose(d -> unlockInternal(player, nodePath, d));
+        }
+        return unlockInternal(player, nodePath, data);
+    }
+
     private CompletableFuture<Void> setStatusInternal(UUID player, String nodePath, boolean unlocked,
-                                                       PlayerAchievementData data) {
+                                                        PlayerAchievementData data) {
         data.setStatus(nodePath,
                 new PlayerAchievementData.AchievementStatus(unlocked,
                         unlocked ? System.currentTimeMillis() : -1L));
         return storage.save(player, data);
+    }
+
+    private CompletableFuture<Void> unlockInternal(UUID player, String nodePath,
+                                                    PlayerAchievementData data) {
+        data.setStatus(nodePath,
+                new PlayerAchievementData.AchievementStatus(true, System.currentTimeMillis()));
+        return storage.save(player, data).thenRun(() -> {
+            // 在主线程广播事件
+            org.bukkit.Bukkit.getScheduler().runTask(plugin, () -> {
+                org.bukkit.entity.Player p = org.bukkit.Bukkit.getPlayer(player);
+                if (p != null) {
+                    var event = new cc.oniacute.plugin.bakaachievements.api.event.AchievementUpdateEvent(
+                            p, nodePath, true, "api_unlock");
+                    org.bukkit.Bukkit.getPluginManager().callEvent(event);
+                }
+            });
+        });
     }
 
     // ── 自定义条件类型 ───────────────────────────────────

@@ -1,5 +1,7 @@
 package cc.oniacute.plugin.bakaachievements.util;
 
+import org.bukkit.NamespacedKey;
+
 /**
  * 节点路径工具类。
  * <p>
@@ -60,6 +62,23 @@ public final class PathUtil {
     public static String lastName(String path) {
         int idx = path.lastIndexOf('.');
         return idx > 0 ? path.substring(idx + 1) : path;
+    }
+
+    /**
+     * Convert a vanilla Bukkit advancement key to this plugin's mirror node path.
+     */
+    public static String vanillaNodePath(NamespacedKey key) {
+        return vanillaNodePath(key.toString());
+    }
+
+    /**
+     * Convert a vanilla Bukkit advancement key string to this plugin's mirror node path.
+     */
+    public static String vanillaNodePath(String key) {
+        return VANILLA_ROOT + "." + key
+                .replace(':', '.')
+                .replace('/', '_')
+                .replace('-', '_');
     }
 
     /**

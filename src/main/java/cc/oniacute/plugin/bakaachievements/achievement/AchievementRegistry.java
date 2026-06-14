@@ -41,6 +41,10 @@ public final class AchievementRegistry {
             for (AchievementNode child : cat.children()) {
                 indexNode(child);
             }
+        } else if (node instanceof MixedNode mixed) {
+            for (AchievementNode child : mixed.children()) {
+                indexNode(child);
+            }
         }
     }
 
@@ -79,7 +83,8 @@ public final class AchievementRegistry {
      */
     public int getAchievementCount() {
         return (int) pathIndex.values().stream()
-                .filter(n -> n.nodeType() == AchievementNode.NodeType.ACHIEVEMENT)
+                .filter(n -> n.nodeType() == AchievementNode.NodeType.ACHIEVEMENT
+                        || n.nodeType() == AchievementNode.NodeType.MIXED)
                 .count();
     }
 }

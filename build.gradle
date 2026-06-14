@@ -7,6 +7,7 @@ group = 'cc.oniacute.plugin.bakaachievements'
 version = '1.0.0'
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven {
         name = "papermc-repo"
@@ -16,16 +17,21 @@ repositories {
         name = "extendedclip-repo"
         url = "https://repo.extendedclip.com/content/repositories/placeholderapi/"
     }
+    maven {
+        name = "codemc-repo"
+        url = "https://repo.codemc.io/repository/maven-public/"
+    }
 }
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT")
     compileOnly("me.clip:placeholderapi:2.11.6")
+    compileOnly("me.arcaniax:HeadDatabaseAPI:1.3.2")
 }
 
 tasks {
     runServer {
-        minecraftVersion("1.21.4")
+        minecraftVersion("1.21.1")
     }
 }
 

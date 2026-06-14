@@ -38,12 +38,20 @@ public final class Messages {
         return cfg().getMessage("PLAYER_NOT_FOUND", "<red>玩家未找到或不在线。</red>");
     }
 
+    public String playerOnly() {
+        return cfg().getMessage("PLAYER_ONLY", "{prefix} <red>此命令仅限玩家使用.</red>");
+    }
+
     public String configReloaded() {
         return cfg().getMessage("CONFIG_RELOADED", "<green>配置已重载。</green>");
     }
 
     public String messagesReloaded() {
         return cfg().getMessage("MESSAGES_RELOADED", "<green>语言文件已重载。</green>");
+    }
+
+    public String achievementsReloaded() {
+        return cfg().getMessage("ACHIEVEMENTS_RELOADED", "<green>成就已重载。（总数: {count}）</green>");
     }
 
     // ── 命令 ───────────────────────────────────────────
@@ -68,10 +76,26 @@ public final class Messages {
         return cfg().getMessage("INVALID_USAGE", "<red>用法: {usage}</red>");
     }
 
+    public String tipsEnabled() {
+        return cfg().getMessage("TIPS_ENABLED", "<green>成就分享提示已开启。</green>");
+    }
+
+    public String tipsDisabled() {
+        return cfg().getMessage("TIPS_DISABLED", "<yellow>成就分享提示已关闭。</yellow>");
+    }
+
     // ── GUI ────────────────────────────────────────────
 
     public String guiTitleAchievements() {
         return cfg().getMessage("GUI_TITLE_ACHIEVEMENTS", "成就列表");
+    }
+
+    public String guiRootDisplay() {
+        return cfg().getMessage("GUI_ROOT_DISPLAY", "成就列表");
+    }
+
+    public String guiVanillaDisplay() {
+        return cfg().getMessage("GUI_VANILLA_DISPLAY", "原版成就");
     }
 
     public String guiTitleSearch() {
@@ -122,11 +146,178 @@ public final class Messages {
         return cfg().getMessage("GUI_NO_CONDITIONS", "<gray>此成就无条件限制</gray>");
     }
 
+    public String guiEmptyCategory() {
+        return cfg().getMessage("GUI_EMPTY_CATEGORY", "<gray>（空分类）</gray>");
+    }
+
+    public String guiClickToEnter() {
+        return cfg().getMessage("GUI_CLICK_TO_ENTER", "<green>▶ 点击进入</green>");
+    }
+
+    public String guiRequirementsHeader() {
+        return cfg().getMessage("GUI_REQUIREMENTS_HEADER", "<gold>要求:</gold>");
+    }
+
+    public String guiMixedUnlockedNav() {
+        return cfg().getMessage("GUI_MIXED_UNLOCKED_NAV", "<yellow>▶ 左键尝试完成</yellow>");
+    }
+
+    public String guiMixedRightClick() {
+        return cfg().getMessage("GUI_MIXED_RIGHT_CLICK", "<green>▶ 右键打开子分类</green>");
+    }
+
+    public String guiActionBackName() {
+        return cfg().getMessage("GUI_ACTION_BACK_NAME", "<gray>返回上级</gray>");
+    }
+
+    public String guiActionBackLore() {
+        return cfg().getMessage("GUI_ACTION_BACK_LORE", "<gray>点击返回: <white>{target}</white></gray>");
+    }
+
+    public String guiActionPrevName() {
+        return cfg().getMessage("GUI_ACTION_PREV_NAME", "<yellow>上一页</yellow>");
+    }
+
+    public String guiActionPrevLore() {
+        return cfg().getMessage("GUI_ACTION_PREV_LORE",
+                "<gray>当前页: <white>{current}/{total}</white></gray>|<gray>点击前往: <yellow>{target}</yellow></gray>");
+    }
+
+    public String guiActionNextName() {
+        return cfg().getMessage("GUI_ACTION_NEXT_NAME", "<yellow>下一页</yellow>");
+    }
+
+    public String guiActionNextLore() {
+        return cfg().getMessage("GUI_ACTION_NEXT_LORE",
+                "<gray>当前页: <white>{current}/{total}</white></gray>|<gray>点击前往: <yellow>{target}</yellow></gray>");
+    }
+
+    public String guiActionStatsLore() {
+        return cfg().getMessage("GUI_ACTION_STATS_LORE",
+                "<gray>进度: <green>{done}</green><gray>/</gray><white>{total}</white> <aqua>{percent}%</aqua></gray>|{progress_bar}|<gray>{path}</gray>|<yellow>{root_hint}</yellow>|<yellow>{share_hint}</yellow>");
+    }
+
+    public String guiActionRootHint() {
+        return cfg().getMessage("GUI_ACTION_ROOT_HINT", "左键返回根目录");
+    }
+
+    public String guiActionShareHint() {
+        return cfg().getMessage("GUI_ACTION_SHARE_HINT", "Shift+左键分享总进度");
+    }
+
+    public String guiSearchEmptyName() {
+        return cfg().getMessage("GUI_SEARCH_EMPTY_NAME", "<yellow>没有找到结果</yellow>");
+    }
+
+    public String guiSearchEmptyLore() {
+        return cfg().getMessage("GUI_SEARCH_EMPTY_LORE",
+                "<gray>关键词: <white>{keyword}</white></gray>|<gray>换一个关键词再试.</gray>");
+    }
+
+    public String guiEmptyCategoryName() {
+        return cfg().getMessage("GUI_EMPTY_CATEGORY_NAME", "<yellow>空分类</yellow>");
+    }
+
+    public String guiEmptyCategoryLore() {
+        return cfg().getMessage("GUI_EMPTY_CATEGORY_LORE",
+                "<gray>这里暂时没有可显示的成就.</gray>");
+    }
+
     // ── 聊天广播 ───────────────────────────────────────
 
     public String chatAchievementUnlocked() {
         return cfg().getMessage("CHAT_ACHIEVEMENT_UNLOCKED",
-                "<gold>{player}</gold> <gray>解锁了成就</gray> <green>{display}</green>");
+                "<gold>{player_displayname}</gold> <gray>解锁了成就</gray> <green>{display}</green>");
+    }
+
+    // ── 成就分享 ───────────────────────────────────────
+
+    public String shareUnlocked() {
+        return cfg().getMessage("SHARE_ACHIEVEMENT_UNLOCKED",
+                "<gold>{player_displayname}</gold> <gray>分享了成就</gray> {__HOVER__} <dark_gray>(已达成 {time})</dark_gray>");
+    }
+
+    public String shareLocked() {
+        return cfg().getMessage("SHARE_ACHIEVEMENT_LOCKED",
+                "<gold>{player_displayname}</gold> <gray>分享了成就</gray> {__HOVER__} <dark_gray>{progress_bar} {percent}</dark_gray>");
+    }
+
+    public String shareOnCooldown(long seconds) {
+        return cfg().getMessage("SHARE_ON_COOLDOWN",
+                "<yellow>分享太频繁了, 请在 {seconds}s 后重试.</yellow>")
+                .replace("{seconds}", String.valueOf(Math.max(1L, seconds)));
+    }
+
+    public String shareProgress() {
+        return cfg().getMessage("SHARE_PROGRESS",
+                "<gradient:#6cd3ff:#dc67ff>{player_displayname}</gradient> <gray>已完成</gray> <green>{done}</green><gray>/</gray><white>{total}</white> <gray>项成就</gray> (<yellow>{percent}%</yellow>)");
+    }
+
+    public String timeUnknown() {
+        return cfg().getMessage("TIME_UNKNOWN", "未知");
+    }
+
+    // ── 信息命令 ───────────────────────────────────────
+
+    public String infoHeader() {
+        return cfg().getMessage("INFO_HEADER",
+                "<gradient:#6cd3ff:#dc67ff>BakaAchievements</gradient> <gray>v{version}</gray>");
+    }
+
+    public String infoTotal() {
+        return cfg().getMessage("INFO_TOTAL", "<gray>成就总数: {total}</gray>");
+    }
+
+    public String infoPapi() {
+        return cfg().getMessage("INFO_PAPI", "<gray>PlaceholderAPI: {status}</gray>");
+    }
+
+    // ── Hover 卡片文本 ─────────────────────────────────
+
+    public String hoverTitle() {
+        return cfg().getMessage("HOVER_TITLE", "<gold>成就详情</gold>");
+    }
+
+    public String hoverUnlocked() {
+        return cfg().getMessage("HOVER_UNLOCKED", "<green>已达成！</green>");
+    }
+
+    public String hoverUnlockedTime() {
+        return cfg().getMessage("HOVER_UNLOCKED_TIME", "<green>已达成 ✓ {time}</green>");
+    }
+
+    public String hoverLockedNoCondition() {
+        return cfg().getMessage("HOVER_LOCKED_NO_CONDITION", "<yellow>未达成（无条件限制）</yellow>");
+    }
+
+    public String hoverLockedWithCount() {
+        return cfg().getMessage("HOVER_LOCKED_WITH_COUNT", "<yellow>未达成（{count} 个条件）</yellow>");
+    }
+
+    public String hoverRequirementsHeader() {
+        return cfg().getMessage("HOVER_REQUIREMENTS_HEADER", "<gold>要求:</gold>");
+    }
+
+    public String hoverSeparator() {
+        return cfg().getMessage("HOVER_SEPARATOR", "<dark_gray>──────────────</dark_gray>");
+    }
+
+    // ── 按钮 fallback ──────────────────────────────────
+
+    public String btnPrevPage() {
+        return cfg().getMessage("BTN_PREV_PAGE", "上一页");
+    }
+
+    public String btnNextPage() {
+        return cfg().getMessage("BTN_NEXT_PAGE", "下一页");
+    }
+
+    public String btnClose() {
+        return cfg().getMessage("BTN_CLOSE", "关闭");
+    }
+
+    public String btnBack() {
+        return cfg().getMessage("BTN_BACK", "返回上级");
     }
 
     // ── 工具方法 ───────────────────────────────────────

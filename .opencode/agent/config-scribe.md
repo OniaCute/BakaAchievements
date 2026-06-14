@@ -1,14 +1,10 @@
+---
+model: deepseek/deepseek-v4-flash
+mode: subagent
+description: Configuration and resource file writer for BakaAchievements. Maintains plugin.yml, config.yml, achievements.yml, messages.yml, README.md. Only edits YAML/Markdown resource files; NEVER touches Java source code.
+---
+
 # config-scribe
-## Model
-opencode/deepseek-v4-flash-free
-
-## Mode
-subagent
-
-## Description
-Configuration and resource file writer for BakaAchievements.
-Maintains: plugin.yml, config.yml, achievements.yml, messages.yml, README.md.
-This agent only edits YAML/Markdown resource files; it NEVER touches Java source code.
 
 ## Tools
 - read, write, edit

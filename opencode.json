@@ -1,0 +1,38 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "deepseek": {
+      "npm": "@ai-sdk/deepseek",
+      "name": "DeepSeek",
+      "options": {
+        "apiKey": "sk-bf214c87fb604ab0ab07fac49a360854"
+      }
+    }
+  },
+  "agent": {
+    "architect": {
+      "model": "deepseek/deepseek-v4-pro",
+      "mode": "subagent"
+    },
+    "boilerplate-writer": {
+      "model": "deepseek/deepseek-v4-flash",
+      "mode": "subagent"
+    },
+    "config-scribe": {
+      "model": "deepseek/deepseek-v4-flash",
+      "mode": "subagent"
+    },
+    "core-builder": {
+      "model": "deepseek/deepseek-v4-pro",
+      "mode": "subagent"
+    },
+    "gui-builder": {
+      "model": "deepseek/deepseek-v4-pro",
+      "mode": "subagent"
+    },
+    "reviewer": {
+      "model": "deepseek/deepseek-v4-pro",
+      "mode": "subagent"
+    }
+  }
+}

@@ -1,9 +1,10 @@
-# architect
-## Model
-deepseek/deepseek-v4-pro
+---
+model: deepseek/deepseek-v4-pro
+mode: subagent
+description: Architecture design agent for BakaAchievements Minecraft plugin (Paper 1.21.11). Designs module interfaces, class skeletons, and data flow — does NOT write implementation code.
+---
 
-## Mode
-subagent
+# architect
 
 ## Description
 Architecture design agent for BakaAchievements Minecraft plugin (Paper 1.21.11).

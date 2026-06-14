@@ -1,0 +1,543 @@
+# BakaAchievements 原版成就中文化映射表
+# key: 原版成就的完整 namespace:path（如 minecraft:story/mine_stone）
+# display: 中文显示名称
+# description: 中文描述信息, 单行 lore
+# descriptions: 中文描述信息, 多行 lore, 会优先于 description
+# 未在此文件中定义的成就,将回退到 Bukkit API 提供的原版翻译
+
+advancements:
+  # ============================================
+  # minecraft:story —— Minecraft（故事）
+  # ============================================
+  "minecraft:story/root":
+    display: "Minecraft"
+    description: "游戏的核心与故事"
+
+  "minecraft:story/mine_stone":
+    display: "石器时代"
+    description: "用你的新镐子挖掘石头"
+
+  "minecraft:story/upgrade_tools":
+    display: "获得升级"
+    description: "制作一把更好的镐子"
+
+  "minecraft:story/smelt_iron":
+    display: "来硬的"
+    description: "冶炼一块铁锭"
+
+  "minecraft:story/obtain_armor":
+    display: "整装上阵"
+    description: "用铁盔甲来保护你自己"
+
+  "minecraft:story/lava_bucket":
+    display: "热腾腾的"
+    description: "用铁桶装点岩浆"
+
+  "minecraft:story/iron_tools":
+    display: "这不是铁镐么"
+    description: "制作一把铁镐"
+
+  "minecraft:story/deflect_arrow":
+    display: "不吃这一套"
+    description: "用盾牌反弹一支箭"
+
+  "minecraft:story/form_obsidian":
+    display: "冰桶挑战"
+    description: "获得黑曜石"
+
+  "minecraft:story/mine_diamond":
+    display: "钻石!"
+    description: "获得钻石"
+
+  "minecraft:story/enter_the_nether":
+    display: "勇往直下"
+    description: "建造,激活并进入下界传送门"
+
+  "minecraft:story/shiny_gear":
+    display: "用钻石覆盖我"
+    description: "钻石盔甲能救人"
+
+  "minecraft:story/enchant_item":
+    display: "附魔师"
+    description: "在附魔台里附魔一件物品"
+
+  "minecraft:story/cure_zombie_villager":
+    display: "僵尸医生"
+    description: "弱化并治好一只僵尸村民"
+
+  "minecraft:story/follow_ender_eye":
+    display: "隔墙有眼"
+    description: "跟随末影之眼"
+
+  "minecraft:story/enter_the_end":
+    display: "结束了?"
+    description: "进入末地传送门"
+
+  # ============================================
+  # minecraft:nether —— 下界
+  # ============================================
+  "minecraft:nether/root":
+    display: "下界"
+    description: "记得带夏装"
+
+  "minecraft:nether/return_to_sender":
+    display: "见鬼去吧"
+    description: "用一团火球干掉一只恶魂"
+
+  "minecraft:nether/find_bastion":
+    display: "光辉夺目"
+    description: "进入堡垒遗迹"
+
+  "minecraft:nether/obtain_ancient_debris":
+    display: "深藏不露"
+    description: "获得远古残骸"
+
+  "minecraft:nether/fast_travel":
+    display: "曲速泡"
+    description: "利用下界移动对应主世界7千米的距离"
+
+  "minecraft:nether/find_fortress":
+    display: "阴森的要塞"
+    description: "用你的方式进入下界要塞"
+
+  "minecraft:nether/obtain_crying_obsidian":
+    display: "谁在切洋葱?"
+    description: "获得哭泣的黑曜石"
+
+  "minecraft:nether/distract_piglin":
+    display: "金光闪闪"
+    description: "用金质物品让猪灵分神"
+
+  "minecraft:nether/ride_strider":
+    display: "画船添足"
+    description: "手持诡异菌钓竿骑乘炽足兽"
+
+  "minecraft:nether/ride_strider_in_overworld_lava":
+    display: "温暖如家"
+    description: "带炽足兽在主世界的熔岩湖上来一场长——途旅行"
+
+  "minecraft:nether/uneasy_alliance":
+    display: "脆弱的联盟"
+    description: "从下界救出一只恶魂,将其安全地带到主世界……然后干掉它"
+
+  "minecraft:nether/loot_bastion":
+    display: "战猪"
+    description: "掠夺堡垒遗迹里的箱子"
+
+  "minecraft:nether/use_lodestone":
+    display: "天涯共此石"
+    description: "对磁石使用指南针"
+
+  "minecraft:adventure/use_lodestone":
+    display: "天涯共此石"
+    description: "对磁石使用指南针"
+
+  "minecraft:nether/netherite_armor":
+    display: "残骸裹身"
+    description: "获得一整套下界合金盔甲"
+
+  "minecraft:nether/get_wither_skull":
+    display: "惊悚恐怖骷髅头"
+    description: "获得凋灵骷髅头颅"
+
+  "minecraft:nether/obtain_blaze_rod":
+    display: "与火共舞"
+    description: "让烈焰人从烈焰棒中解放吧"
+
+  "minecraft:nether/brew_potion":
+    display: "本地酿造"
+    description: "酿造一瓶药水"
+
+  "minecraft:nether/summon_wither":
+    display: "凋零山庄"
+    description: "生成凋灵"
+
+  "minecraft:nether/all_effects":
+    display: "为什么会变成这样呢"
+    description: "同时拥有所有状态效果"
+
+  "minecraft:nether/create_beacon":
+    display: "带信标回家"
+    description: "建造并放置一个信标"
+
+  "minecraft:nether/create_full_beacon":
+    display: "信标工程师"
+    description: "让一座信标发挥最大功效"
+
+  "minecraft:nether/all_potions":
+    display: "狂乱的鸡尾酒"
+    description: "同时拥有所有药水效果"
+
+  "minecraft:nether/charge_respawn_anchor":
+    display: "锚没有九条命"
+    description: "为重生锚充满能量"
+
+  "minecraft:nether/explore_nether":
+    display: "热门景点"
+    description: "探索所有下界生物群系"
+
+  # ============================================
+  # minecraft:end —— 末地
+  # ============================================
+  "minecraft:end/root":
+    display: "末地"
+    description: "抑或是起点?"
+
+  "minecraft:end/kill_dragon":
+    display: "解放末地"
+    description: "祝你好运"
+
+  "minecraft:end/dragon_egg":
+    display: "下一世代"
+    description: "获得龙蛋"
+
+  "minecraft:end/enter_end_gateway":
+    display: "远程折跃"
+    description: "逃离这座岛屿"
+
+  "minecraft:end/respawn_dragon":
+    display: "天空即为极限"
+    description: "复活末影龙"
+
+  "minecraft:end/dragon_breath":
+    display: "你需要来点薄荷糖"
+    description: "收集龙息并装入玻璃瓶"
+
+  "minecraft:end/find_end_city":
+    display: "在游戏尽头"
+    description: "进入末地城"
+
+  "minecraft:end/elytra":
+    display: "天空才是极限"
+    description: "找到鞘翅"
+
+  "minecraft:end/levitate":
+    display: "上面风景真好"
+    description: "利用潜影贝的攻击向上漂浮50个方块"
+
+  # ============================================
+  # minecraft:adventure —— 冒险
+  # ============================================
+  "minecraft:adventure/root":
+    display: "冒险"
+    description: "冒险,探索与战斗"
+
+  "minecraft:adventure/voluntary_exile":
+    display: "自我放逐"
+    description: "击杀一名袭击队长.或许该考虑暂时远离村庄..."
+
+  "minecraft:adventure/kill_a_mob":
+    display: "怪物猎人"
+    description: "干掉任意敌对怪物"
+
+  "minecraft:adventure/kill_all_mobs":
+    display: "资深怪物猎人"
+    description: "杀死每一种敌对性怪物"
+
+  "minecraft:adventure/trade":
+    display: "成交!"
+    description: "成功与一名村民进行交易"
+
+  "minecraft:adventure/honey_block_slide":
+    display: "胶着状态"
+    description: "贴着蜂蜜块滑下来以减缓你的下落"
+
+  "minecraft:adventure/ol_betsy":
+    display: "扣下扳机"
+    description: "用弩射杀一只怪物"
+
+  "minecraft:adventure/throw_trident":
+    display: "抖包袱"
+    description: "往什么东西上扔出三叉戟."
+
+  "minecraft:adventure/kill_a_mob_with_crossbow":
+    display: "现在谁才是掠夺者"
+    description: "一箭射死一个掠夺者"
+
+  "minecraft:adventure/two_birds_one_arrow":
+    display: "一箭双雕"
+    description: "用一支穿透箭射杀两只幻翼"
+
+  "minecraft:adventure/totem_of_undying":
+    display: "超越生死"
+    description: "利用不死图腾逃离死神"
+
+  "minecraft:adventure/summon_iron_golem":
+    display: "招募援军"
+    description: "召唤一只铁傀儡来帮忙守卫村庄"
+
+  "minecraft:adventure/arbalistic":
+    display: "劲弩手"
+    description: "用弩一击射杀五种不同的生物"
+
+  "minecraft:adventure/adventuring_time":
+    display: "探索的时光"
+    description: "发现所有的生物群系"
+
+  "minecraft:adventure/hero_of_the_village":
+    display: "村庄英雄"
+    description: "成功在袭击中保卫村庄"
+
+  "minecraft:adventure/sniper_duel":
+    display: "狙击手的对决"
+    description: "从50米外射杀一只骷髅"
+
+  "minecraft:adventure/bullseye":
+    display: "正中靶心"
+    description: "从至少30米外射中标靶的中心"
+
+  "minecraft:adventure/shoot_arrow":
+    display: "瞄准目标"
+    description: "用弓和箭射中什么东西"
+
+  "minecraft:adventure/spyglass_at_parrot":
+    display: "那是鸟吗?"
+    description: "用望远镜观察一只鹦鹉"
+
+  "minecraft:adventure/spyglass_at_ghast":
+    display: "那是气球吗?"
+    description: "用望远镜观察一只恶魂"
+
+  "minecraft:adventure/spyglass_at_dragon":
+    display: "那是飞机吗?"
+    description: "用望远镜观察末影龙"
+
+  "minecraft:adventure/lightning_rod_with_villager_no_fire":
+    display: "电涌保护器"
+    description: "在村民身边被闪电击中,且村民毫发无伤"
+
+  "minecraft:adventure/very_very_frightening":
+    display: "非常恐怖"
+    description: "用闪电击中一个村民"
+
+  "minecraft:adventure/avoid_vibration":
+    display: "潜行100级"
+    description: "在潜行状态下靠近幽匿感测体或监守者,防止被其检测到"
+
+  "minecraft:adventure/kill_mob_near_sculk_catalyst":
+    display: "它蔓延了"
+    description: "在幽匿催发体附近击杀生物"
+
+  "minecraft:adventure/walk_on_powder_snow_with_leather_boots":
+    display: "轻功雪上飘"
+    description: "穿着皮革靴子走过细雪"
+
+  "minecraft:adventure/fall_from_world_height":
+    display: "针尖对麦芒"
+    description: "从世界最高处落到最低处并存活下来"
+
+  "minecraft:adventure/play_jukebox_in_meadows":
+    display: "音乐之声"
+    description: "在草甸中使用唱片机播放音乐"
+
+  "minecraft:adventure/read_power_from_chiseled_bookshelf":
+    display: "知识就是力量"
+    description: "使用红石比较器获取雕纹书架的信号强度"
+
+  "minecraft:adventure/read_power_of_chiseled_bookshelf":
+    display: "书籍的力量"
+    description: "使用红石比较器读取雕纹书架发出的信号强度"
+
+  "minecraft:adventure/trade_at_world_height":
+    display: "星际商人"
+    description: "在建筑高度上限处与村民进行交易"
+
+  "minecraft:adventure/salvage_sherd":
+    display: "探古寻源"
+    description: "刷扫可疑的方块来获得陶片"
+
+  "minecraft:adventure/sleep_in_bed":
+    display: "甜蜜的梦"
+    description: "在床上睡觉以改变你的重生点"
+
+  "minecraft:adventure/heart_transplanter":
+    display: "心脏移植师"
+    description: "获得一颗沉重核心"
+
+  # 1.20 Trails & Tales
+  "minecraft:adventure/craft_decorated_pot_using_only_sherds":
+    display: "精修细补"
+    description: "用4个陶片制作一个饰纹陶罐"
+
+  "minecraft:adventure/brush_armadillo":
+    display: "是不是很可爱!"
+    description: "用刷子在犰狳身上刷下犰狳鳞甲"
+
+  "minecraft:adventure/who_needs_rockets":
+    display: "谁还需要火箭?"
+    description: "使用风弹将自己向上弹射8格"
+
+  "minecraft:adventure/minecraft_trials_edition":
+    display: "我的世界:试炼版"
+    description: "踏入试炼密室"
+
+  "minecraft:adventure/crafters_crafting_crafters":
+    display: "合成器合成合成器"
+    description: "靠近一个正在合成合成器的合成器"
+
+  "minecraft:adventure/trim_with_any_armor_pattern":
+    display: "旧貌锻新颜"
+    description: "在锻造台中合成带有纹饰的盔甲"
+
+  "minecraft:adventure/trim_with_all_exclusive_armor_patterns":
+    display: "匠心独具"
+    description: "使用如下锻造模板一次:尖塔,猪鼻,肋骨,监守,幽静,恼鬼,潮汐,向导"
+
+  "minecraft:adventure/lighten_up":
+    display: "除锈"
+    description: "用斧给铜块除锈"
+
+  "minecraft:adventure/overoverkill":
+    display: "过量杀伤"
+    description: "用重锤一击造成至少50颗心的伤害"
+
+  "minecraft:adventure/revaulting":
+    display: "重新存储"
+    description: "使用不祥试炼钥匙打开不祥宝库"
+
+  "minecraft:adventure/under_lock_and_key":
+    display: "锁与钥匙"
+    description: "使用试炼钥匙打开宝库"
+
+  "minecraft:adventure/blowback":
+    display: "反弹"
+    description: "反弹旋风人的风弹来击杀它"
+
+  "minecraft:adventure/spear_many_mobs":
+    display: "生物肉串"
+    description: "用一次三叉戟投掷命中多只生物"
+
+  "minecraft:adventure/whos_the_pillager_now":
+    display: "现在谁才是掠夺者?"
+    description: "让掠夺者也尝尝弩的滋味"
+
+  # ============================================
+  # minecraft:husbandry —— 农牧业
+  # ============================================
+  "minecraft:husbandry/root":
+    display: "农牧业"
+    description: "这个世界无处没有朋友与美食"
+
+  "minecraft:husbandry/safely_harvest_honey":
+    display: "蜂农"
+    description: "用营火从蜂巢中安全收获蜂蜜"
+
+  "minecraft:husbandry/breed_an_animal":
+    display: "我从哪儿来?"
+    description: "让两个同种动物繁殖"
+
+  "minecraft:husbandry/tame_an_animal":
+    display: "永远的伙伴"
+    description: "驯服一只动物"
+
+  "minecraft:husbandry/fishy_business":
+    display: "腥味十足的生意"
+    description: "钓到一条鱼"
+
+  "minecraft:husbandry/tactical_fishing":
+    display: "战术性钓鱼"
+    description: "不用钓鱼竿抓住一条鱼!"
+
+  "minecraft:husbandry/breed_all_animals":
+    display: "成双成对"
+    description: "繁殖每种动物!"
+
+  "minecraft:husbandry/bred_all_animals":
+    display: "成双成对"
+    description: "繁殖每种动物!"
+
+  "minecraft:husbandry/complete_catalogue":
+    display: "猫科全图鉴"
+    description: "驯服所有种类的猫!"
+
+  "minecraft:husbandry/whole_pack":
+    display: "狼群"
+    description: "驯服所有种类的狼"
+
+  "minecraft:husbandry/netherite_hoe":
+    display: "终极奉献"
+    description: "用下界合金锭升级一把锄,然后重新考虑你的人生抉择"
+
+  "minecraft:husbandry/obtain_netherite_hoe":
+    display: "终极奉献"
+    description: "用下界合金升级一把锄,然后重新考虑你的人生抉择"
+
+  "minecraft:husbandry/balanced_diet":
+    display: "均衡饮食"
+    description: "吃遍所有能吃的东西,即使吃了对你身体不好也没关系"
+
+  "minecraft:husbandry/wax_on":
+    display: "涂蜡"
+    description: "将蜜脾涂在铜块上"
+
+  "minecraft:husbandry/wax_off":
+    display: "除蜡"
+    description: "用斧给铜块除蜡"
+
+  "minecraft:husbandry/repair_wolf_armor":
+    display: "完好如初"
+    description: "修复一件狼铠"
+
+  "minecraft:husbandry/remove_wolf_armor":
+    display: "剪得漂亮"
+    description: "从狼身上取下狼铠"
+
+  "minecraft:husbandry/make_a_sign_glow":
+    display: "眼前一亮!"
+    description: "让告示牌的文字发光"
+
+  "minecraft:husbandry/axolotl_in_a_bucket":
+    display: "最萌捕食者"
+    description: "用铁桶捕获一只美西螈"
+
+  "minecraft:husbandry/kill_axolotl_target":
+    display: "友谊的治愈力!"
+    description: "与美西螈并肩作战并赢得胜利"
+
+  "minecraft:husbandry/allay_deliver_cake_to_note_block":
+    display: "生日快乐歌"
+    description: "让悦灵向音符盒投掷一块蛋糕"
+
+  "minecraft:husbandry/allay_deliver_item_to_player":
+    display: "找到一个好朋友"
+    description: "让悦灵向你投递物品"
+
+  "minecraft:husbandry/leash_all_frog_variants":
+    display: "相映生辉!"
+    description: "用拴绳牵着所有种类的青蛙"
+
+  "minecraft:husbandry/froglights":
+    display: "哇!光亮!"
+    description: "获得蛙明灯"
+
+  "minecraft:husbandry/tadpole_in_a_bucket":
+    display: "蚪斗"
+    description: "用铁桶捕获一只蝌蚪"
+
+  "minecraft:husbandry/plant_any_sniffer_seed":
+    display: "小小嗅探兽"
+    description: "种植嗅探兽种子"
+
+  "minecraft:husbandry/plant_seed":
+    display: "开荒垦地"
+    description: "种下种子,见证它的成长"
+
+  "minecraft:husbandry/place_dried_ghast_in_water":
+    display: "注意补水!"
+    description: "把一只干枯恶魂放进水里"
+
+  "minecraft:husbandry/feed_snifflet":
+    display: "长鼻子的馈赠"
+    description: "喂食一只幼年嗅探兽"
+
+  "minecraft:husbandry/obtain_sniffer_egg":
+    display: "考古学家"
+    description: "用刷子获得嗅探兽蛋"
+
+  "minecraft:husbandry/ride_a_boat_with_a_goat":
+    display: "飘羊过海!"
+    description: "和山羊一起乘船"
+
+  "minecraft:husbandry/silk_touch_nest":
+    display: "举巢搬迁"
+    description: "用精准采集附魔的工具采集蜂巢,内部至少有3只蜜蜂"

@@ -58,8 +58,21 @@ public interface BakaApi {
 
     // ── 状态变更 ─────────────────────────────────────────
 
-    /** 设置玩家成就状态（异步写盘） */
+    /** 设置玩家成就状态（异步写盘，不触发事件） */
     CompletableFuture<Void> setStatus(UUID player, String nodePath, boolean unlocked);
+
+    /**
+     * 解锁玩家成就并触发 {@link cc.oniacute.plugin.bakaachievements.api.event.AchievementUpdateEvent}。
+     * <p>
+     * 与 {@link #setStatus} 不同，此方法会广播事件供外部插件监听。
+     * 适用于外部插件主动解锁成就的场景。
+     * </p>
+     *
+     * @param player   玩家 UUID
+     * @param nodePath 成就节点路径
+     * @return 异步 Future（写盘完成后完成）
+     */
+    CompletableFuture<Void> unlock(UUID player, String nodePath);
 
     // ── 自定义条件类型扩展 ──────────────────────────────
 

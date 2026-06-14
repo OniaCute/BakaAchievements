@@ -1,14 +1,10 @@
+---
+model: deepseek/deepseek-v4-flash
+mode: subagent
+description: Boilerplate code generator for BakaAchievements. Produces records, POJOs, simple utility classes, Javadoc, enum types. Does NOT write business logic, async code, or cross-file changes.
+---
+
 # boilerplate-writer
-## Model
-opencode/deepseek-v4-flash-free
-
-## Mode
-subagent
-
-## Description
-Boilerplate code generator for BakaAchievements.
-Produces: records, POJOs, simple utility classes, Javadoc, enum types.
-This agent does NOT write business logic, async code, or cross-file changes.
 
 ## Tools
 - read, write, edit
